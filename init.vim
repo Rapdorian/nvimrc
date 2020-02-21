@@ -28,6 +28,7 @@ set list listchars=tab:»»,trail:·
 autocmd BufNewFile,BufRead *.s set filetype=asmM6502
 autocmd BufNewFile,BufRead *.inc set filetype=asmM6502
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript
+autocmd BufNewFile,BufRead *.plant set filetype=plantuml
 
 " Setup ctrlp
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
@@ -74,4 +75,4 @@ let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
 let g:ale_set_balloons = 1
 
-nmap <leader>t :TagbarToggle<CR>
+nmap <leader>s :TagbarToggle<CR>
