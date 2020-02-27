@@ -6,7 +6,7 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'morhetz/gruvbox'
+Plug 'arcticicestudio/nord-vim'
 Plug 'chrisbra/Colorizer'
 
 Plug 'majutsushi/tagbar'
@@ -48,7 +48,7 @@ filetype on
 
 set termguicolors
 
-colorscheme gruvbox
+colorscheme nord
 set background=dark
 hi Normal guibg=NONE ctermbg=NONE
 hi SignColumn guibg=NONE ctermbg=NONE
