@@ -1,2 +1,2 @@
-set makeprg=bash\ %
-set errorformat=%f:\ line\ %l:\ %m,%-G%.%#
+setlocal makeprg=bash\ %
+setlocal errorformat=%f:\ line\ %l:\ %m,%-G%.%#

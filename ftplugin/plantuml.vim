@@ -1,3 +1,3 @@
 if executable('plantuml')
-    set makeprg=plantuml\ %
+    setlocal makeprg=plantuml\ %
 endif
