@@ -76,3 +76,8 @@ let g:ale_completion_enabled = 1
 let g:ale_set_balloons = 1
 
 nmap <leader>s :TagbarToggle<CR>
+
+" Open vim session if it exists
+if filereadable("Session.vim")
+    source Session.vim
+endif
