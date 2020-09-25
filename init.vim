@@ -14,6 +14,7 @@ Plug 'majutsushi/tagbar'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'prabirshrestha/vim-lsp'
 Plug 'lighttiger2505/deoplete-vim-lsp'
+Plug 'matze/vim-move'
 Plug 'aurieh/discord.nvim'
 
 " Language specific
@@ -40,8 +41,9 @@ Plug 'OmniSharp/omnisharp-vim', {'for': ['cs']}
 Plug 'rhysd/vim-clang-format'
 Plug 'tikhomirov/vim-glsl'
 
-" 6502
+" ASM
 Plug 'vim-scripts/asmM6502.vim'
+Plug 'Harenome/vim-mipssyntax'
 
 
 call plug#end()
@@ -57,7 +59,8 @@ let maplocalleader = ";"
 
 set list listchars=tab:»»,trail:·
 
-autocmd BufNewFile,BufRead *.s set filetype=asmM6502
+autocmd BufNewFile,BufRead *.s set filetype=mips
+autocmd BufNewFile,BufRead *.dnd set filetype=dnd
 autocmd BufNewFile,BufRead *.inc set filetype=asmM6502
 "autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 autocmd BufNewFile,BufRead *.plant set filetype=plantuml
@@ -92,20 +95,6 @@ nmap gs :Step<CR>
 nmap gb :Break<CR>
 nmap gc :Continue<CR>
 nmap ge :Evaluate 
-
-"set omnifunc=ale#completion#OmniFunc
-
-"set completeopt+=noinsert
-"set completeopt+=longest
-
-"let g:ale_open_list = 1
-"let g:ale_virtualtext_cursor = 1
-"let g:ale_echo_cursor = 1
-"
-"let g:ale_fix_on_save = 1
-"
-"let g:ale_completion_enabled = 1
-"let g:ale_set_balloons = 1
 
 nmap <leader>s :TagbarToggle<CR>
 
@@ -157,3 +146,7 @@ augroup lsp_install
     " call s:on_lsp_buffer_enabled only for languages that has the server registered.
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
