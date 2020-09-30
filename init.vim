@@ -15,8 +15,8 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'prabirshrestha/vim-lsp'
 Plug 'lighttiger2505/deoplete-vim-lsp'
 Plug 'matze/vim-move'
-Plug 'aurieh/discord.nvim'
-
+Plug 'Rapdorian/discord.nvim'
+Plug 'chriskempson/base16-vim'
 " Language specific
 
 " Rust
@@ -48,14 +48,21 @@ Plug 'Harenome/vim-mipssyntax'
 
 call plug#end()
 
+set clipboard=unnamedplus
+
+let g:discord_fts_whitelist_enabled=0
+
 "inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 "inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 
 let g:deoplete#enable_at_startup = 1
-
+set mouse=a
 let mapleader = " "
 let maplocalleader = ";"
+
+set foldmethod=syntax
+set foldlevelstart=10
 
 set list listchars=tab:»»,trail:·
 
