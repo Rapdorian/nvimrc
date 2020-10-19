@@ -6,8 +6,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'junegunn/fzf.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
 Plug 'majutsushi/tagbar'
 
@@ -15,14 +15,13 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'prabirshrestha/vim-lsp'
 Plug 'lighttiger2505/deoplete-vim-lsp'
 Plug 'matze/vim-move'
-Plug 'Rapdorian/discord.nvim'
-Plug 'chriskempson/base16-vim'
+"Plug 'Rapdorian/discord.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'ChesleyTan/wordCount.vim'
 " Language specific
 
 " Rust
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
-Plug 'rust-lang/rust.vim', {'for': 'rust'}
-Plug 'cespare/vim-toml'
+Plug 'cespare/vim-toml', {'for': 'toml' }
 
 " Typescript/javascript
 Plug 'prettier/vim-prettier', {
@@ -47,6 +46,8 @@ Plug 'Harenome/vim-mipssyntax'
 
 
 call plug#end()
+
+let g:lsp_documentation_float = 0
 
 set clipboard=unnamedplus
 
@@ -86,7 +87,7 @@ set hidden
 
 set expandtab
 
-set relativenumber number
+" set relativenumber number
 
 syntax on
 filetype on
@@ -157,3 +158,12 @@ augroup END
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+autocmd VimEnter * set laststatus=0
+autocmd VimEnter * set noruler
+set statusline=-
+set fillchars+=stl:-,stlnc:-,eob:\ 
+augroup cmdline
+    autocmd!
+    autocmd CmdlineLeave : echo ''
+augroup end

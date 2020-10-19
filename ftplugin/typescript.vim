@@ -1,5 +1,3 @@
-"let g:ale_linters = {'typescript': ['tsserver']}
-
 setlocal tabstop=2
 setlocal shiftwidth=2
 
@@ -9,4 +7,3 @@ nmap <buffer> gt <plug>(ts-type-def)
 nmap <buffer> gn <plug>(ts-rename)
 nmap <buffer> K <plug>(ts-type)
 nmap <buffer> ga <plug>(ts-get-code-fix)
-"runtime ale_keys.vim
