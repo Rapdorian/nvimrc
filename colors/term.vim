@@ -59,9 +59,28 @@ hi! link NonText Comment
 exe "hi Pmenu ctermbg=0 ctermfg=8 guibg=".color0." guifg=".color8
 exe "hi PmenuSel ctermbg=8 ctermbg=0 guibg=".color8." guifg=".color0
 
+exe "hi VertSplit ctermbg=NONE ctermfg=7 cterm=NONE guibg=NONE guifg=".color7
+
+hi! link StatusLine VertSplit
+exe "hi StatusLineNC ctermbg=NONE ctermfg=8 cterm=NONE guibg=NONE guifg=".color8
+
 " Sign Column
 hi SignColumn ctermbg=NONE guibg=NONE
 exe "hi LineNr ctermfg=11 guifg=".color11
 exe "hi CursorLineNr ctermfg=11 guifg=".color11
 exe "hi Error ctermbg=9 guibg=".color9
+exe "hi ErrSign ctermfg=3 guifg=".color3
+exe "hi WarnSign ctermfg=6 guifg=".color6
+exe "hi InfoSign ctermfg=7 guifg=".color7
+
+hi! link LspDiagnosticsVirtualTextError ErrSign
+hi! link LspDiagnosticsVirtualTextWarning WarnSign
+hi! link LspDiagnosticsVirtualTextInformation InfoSign
+hi! link LspDiagnosticsVirtualTextHint InfoSign
+
+hi! link LspDiagnosticsFloatingError ErrSign
+hi! link LspDiagnosticsFloatingWarning WarnSign
+hi! link LspDiagnosticsFloatingInformation InfoSign
+hi! link LspDiagnosticsFloatingHint InfoSign
+
 hi! link ErrorMsg Error
