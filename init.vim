@@ -10,6 +10,10 @@ Plug 'junegunn/fzf.vim'
 "Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
 Plug 'majutsushi/tagbar'
+Plug 'vimwiki/vimwiki'
+Plug 'dylanaraps/wal.vim'
+Plug 'noahfrederick/vim-noctu'
+
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'prabirshrestha/vim-lsp'
@@ -47,15 +51,13 @@ Plug 'Harenome/vim-mipssyntax'
 
 call plug#end()
 
-let g:lsp_documentation_float = 0
+let g:lsp_documentation_float = 1
 
 set clipboard=unnamedplus
 
 let g:discord_fts_whitelist_enabled=0
 
-"inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-"inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 
 let g:deoplete#enable_at_startup = 1
 set mouse=a

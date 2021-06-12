@@ -56,8 +56,8 @@ exe "hi Search ctermfg=0 ctermbg=11 guifg=".color0." guibg=".color11
 hi! link WildMenu Search
 hi! link NonText Comment
 
-exe "hi Pmenu ctermbg=0 ctermfg=7 guibg=".color0." guifg=".color7
-exe "hi PmenuSel ctermbg=7 ctermbg=0 guibg=".color7." guifg=".color0
+exe "hi Pmenu ctermbg=0 ctermfg=8 guibg=".color0." guifg=".color8
+exe "hi PmenuSel ctermbg=8 ctermbg=0 guibg=".color8." guifg=".color0
 
 " Sign Column
 hi SignColumn ctermbg=NONE guibg=NONE
