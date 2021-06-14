@@ -18,6 +18,7 @@ tablen (4)
 
 mapft('*.dnd', 'dnd')
 mapft('*.plant', 'plantuml')
+mapft('*.wgsl', 'wgsl')
 
 -- languages
 require'lspconfig'.rust_analyzer.setup{}

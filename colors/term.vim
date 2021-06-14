@@ -43,11 +43,11 @@ let color15=system('xgetres vim.color15 | tr -d \\n')
 
 exe "hi Comment  ctermfg=4 guifg=".color4
 exe "hi PreProc  ctermfg=5 guifg=".color5
-exe "hi Constant ctermfg=1 guifg=".color1
+exe "hi Constant ctermfg=3 guifg=".color3
 exe "hi Type     ctermfg=2 guifg=".color2
 exe "hi Special  ctermfg=5 guifg=".color5
-exe "hi Statement ctermfg=9 guifg=".color9
-exe "hi Identifier ctermfg=14 guifg=".color14
+exe "hi Statement ctermfg=1 guifg=".color1
+exe "hi Identifier ctermfg=6 guifg=".color6
 exe "hi Todo ctermfg=0 ctermbg=11 guifg=".color0." guibg=".color11
 
 "Vim UI
