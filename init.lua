@@ -15,6 +15,7 @@ vim.opt.foldmethod = 'syntax'
 vim.opt.foldlevelstart = 10
 vim.opt.hidden = true
 vim.wo.number = true
+vim.wo.cursorline = true
 
 -- tablen
 vim.opt.shiftwidth = 4

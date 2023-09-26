@@ -33,6 +33,7 @@ return require('packer').startup(function(use)
     -- lsp
     use 'neovim/nvim-lspconfig'
     use 'hrsh7th/cmp-nvim-lsp'
+    use 'simrat39/symbols-outline.nvim'
 
     -- Rust
     use 'simrat39/rust-tools.nvim'

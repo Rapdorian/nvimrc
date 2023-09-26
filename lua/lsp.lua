@@ -6,6 +6,7 @@ lspconfig.rust_analyzer.setup {
 }
 
 local tele = require 'telescope.builtin'
+require("symbols-outline").setup()
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
